@@ -2,6 +2,9 @@
 
 h1
 {
-  
-    align-self: center;
+  text-align: center;
+    color: blue;
+    border-width: 50px;
+    border-color: black;
+    border-style: groove;
 }
