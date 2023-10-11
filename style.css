@@ -1,7 +1,7 @@
-.mainbutton{padding: 50px;}
+.mainbutton{padding: 45px; border-collapse: collapse; margin-top: 4px;}
 
 h1
 {
   
-    text-align: center;
+    align-self: center;
 }
