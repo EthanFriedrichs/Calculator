@@ -3,13 +3,8 @@
 h1
 {
   text-align: center;
-    color: blue;
+    color: black;
     border-width: 50px;
     border-color: black;
     border-style: groove;
-}
-.mainbutton{
-    text-align: center;
-    border-width: 30px;
-    border-color: black;
 }
