@@ -67,6 +67,11 @@ function calculateResult() {
 
 
   return result;
+  finalResult = result
+  console.log(finalResult)
+}
+
+  return result;
 }
 // Shows input on display within the html
 function updateDisplay() {
@@ -80,4 +85,5 @@ function clearDisplay() {
   flag = 0;
   updateDisplay();
   console.log(numbArray);
+}
 }
