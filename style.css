@@ -3,9 +3,12 @@
 h1
 {
   text-align: center;
-dev_kishaun
-    color: rgb(0, 0, 0);
+  border-width: 45px;
+  border-color: black;
+  border-style: groove;
+ background-color: aliceblue;
+}
 body
 {
-  background-image: url(https://www.careerprofiles.com/wp-content/uploads/2019/05/Hourly-Wage-Calculator-scaled.jpg);
+  background-image: url(https://st4.depositphotos.com/9515902/27906/i/600/depositphotos_279064402-stock-photo-futuristic-glitch-background-abstract-pixel.jpg)
 }
