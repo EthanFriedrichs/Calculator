@@ -76,4 +76,8 @@ function clearDisplay() {
   console.log(numbArray);
 }
 
-
+// function updateDisplay() {
+//   let displayArray = numbArray.filter(item => !isNaN(item)); // filter out non-numeric items
+//   document.getElementById("display").innerHTML = displayArray.join(" ");
+//   calculateResult();
+// }
