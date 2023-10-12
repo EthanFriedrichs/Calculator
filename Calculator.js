@@ -49,7 +49,7 @@ function calculateResult() {
       // If the current element is a number
       if (currentOperator === "+") {
         result += Number(currentElement);
-      } else if (currentOperator === "/") {
+      } else if (currentOperator === "÷") {
         result /= Number(currentElement);
       } else if (currentOperator === "-") {
         result -= Number(currentElement);
