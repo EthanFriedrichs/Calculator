@@ -61,6 +61,7 @@ function calculateResult() {
   }
 
   return result;
+  moveEquationToHistory();  
 }
 // Shows input on display within the html
 function updateDisplay() {
