@@ -61,7 +61,7 @@ function calculateResult() {
   //console.log(finalResult)
 }
 
-function remove()
+function remove() //Removes current element
 {
     console.log(numbArray, "BEFORE")
     numbArray.splice((numbArray.length - 1), 1)
