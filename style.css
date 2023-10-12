@@ -3,7 +3,6 @@
 h1
 {
   text-align: center;
-<<<<<<< HEAD
     color: rgb(0, 0, 0);
     border-width: 50px;
     border-color: black;
@@ -21,11 +20,10 @@ h1
   border-color: black;
   border-style: groove;
  background-color: aliceblue;
->>>>>>> main
 }
 body
 {
-background-color: rgb(rgb(94, 83, 83));
+background-color:rgb(202, 234, 212);
 }
 .mainbutton
 {
@@ -33,4 +31,15 @@ background-color: rgb(rgb(94, 83, 83));
   border-width: 5px;
   border-color: black;
   border-style: groove;
+}
+h2
+{
+  font-size: xx-large;
+}
+.history {
+  text-align: right;
+  display: inline-block;
+  width: 10%;
+  height: 1000%;
+  background-color: whitesmoke;
 }
