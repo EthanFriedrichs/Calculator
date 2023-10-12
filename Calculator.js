@@ -1,5 +1,5 @@
-var numbArray = []
-var flag = 0
+var numbArray = [];
+var flag = 0;
 
 function addThing(x)
 {
@@ -22,4 +22,47 @@ function addSymbol(x) // Gets a symbol buttons symbol and adds it to the array (
     numbArray.push(x.innerHTML)
     console.log(numbArray)
     flag = 0
+}
+
+// Calculates the result of the numbArray and returns it
+function calculateResult() {
+  let result = 0;
+  let currentOperator = "";
+
+  for (let i = 0; i < numbArray.length; i++) {
+    let currentElement = numbArray[i];
+
+    if (!isNaN(currentElement)) {
+      // If the current element is a number
+      if (currentOperator === "+") {
+        result += Number(currentElement);
+      } else if (currentOperator === "/") {
+        result /= Number(currentElement);
+      } else if (currentOperator === "-") {
+        result -= Number(currentElement);
+      } else if (currentOperator === "*") {
+        result *= Number(currentElement);
+      } else if (currentOperator === "") {
+        result = Number(currentElement);
+      }
+    } else {
+      // If the current element is an operator
+      currentOperator = currentElement;
+    }
+  }
+
+  return result;
+}
+// Shows input on display within the html
+function updateDisplay() {
+  document.getElementById("display").innerHTML = numbArray.join(" ");
+  calculateResult();
+}
+// clears the display within the html and calls updateDisplay to show this change
+function clearDisplay() {
+  document.getElementById("display").innerHTML = "0";
+  numbArray = [];
+  flag = 0;
+  updateDisplay();
+  console.log(numbArray);
 }
