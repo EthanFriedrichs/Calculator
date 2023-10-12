@@ -58,7 +58,6 @@ function calculateResult() {
     }
 
   return result;
-=======
   finalResult = result
   console.log(finalResult)
 }
@@ -83,4 +82,3 @@ function clearDisplay() {
   updateDisplay();
   console.log(numbArray);
 }
-
