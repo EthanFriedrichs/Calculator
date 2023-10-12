@@ -1,7 +1,6 @@
 var numbArray = [];
 var flag = 0;
 
-
 function addThing(x) {
   if (flag == 0) {
     // Decides whether to make a number bigger or to add a new number
@@ -18,11 +17,9 @@ function addThing(x) {
   updateDisplay(numbArray.join(" "));
 }
 
-
 function addSymbol(x) {
   flag = 0;
   numbArray.push(x.innerHTML);
-
 
   // If the symbol is "=", calculate the result
   if (x.innerHTML === "=") {
@@ -30,7 +27,7 @@ function addSymbol(x) {
     console.log(result);
     numbArray.push(result);
     updateDisplay(numbArray.join(" "));
-  } else {  
+  } else {
     updateDisplay(numbArray.join(" "));
   }
 }
@@ -40,10 +37,8 @@ function calculateResult() {
   let result = 0;
   let currentOperator = "";
 
-
   for (let i = 0; i < numbArray.length; i++) {
     let currentElement = numbArray[i];
-
 
     if (!isNaN(currentElement)) {
       // If the current element is a number
@@ -64,14 +59,7 @@ function calculateResult() {
     }
   }
 
-
   return result;
-}
-
-// clears the numbArray
-function clear() {
-  numbArray = [];
-  flag = 0;
 }
 // Shows input on display within the html
 function updateDisplay() {
@@ -82,7 +70,7 @@ function updateDisplay() {
 function clearDisplay() {
   document.getElementById("display").innerHTML = "0";
   numbArray = [];
-    flag = 0;
-    updateDisplay();
-    console.log(numbArray);
+  flag = 0;
+  updateDisplay();
+  console.log(numbArray);
 }
