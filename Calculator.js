@@ -2,27 +2,30 @@ var numbArray = [];
 var flag = 0;
 var finalResult = 0;
 
-function addThing(x)
-{
-    if (flag == 0) // Decides whether to make a number bigger or to add a new number
-    {
-    numbArray.push(x.innerHTML)
-    console.log(numbArray)
-    flag = 1
-    }
-
-    else if (!(isNaN(Number(x.innerHTML))))
-    {
-        numbArray[numbArray.length - 1] = String(numbArray[numbArray.length - 1]) + String(x.innerHTML)
-        console.log(numbArray)
-    }
+function addThing(x) {
+  if (numbArray.length == 1 && numbArray[numbArray.length - 1] === "-") {
+    // If previous element is - than append the number to it
+    numbArray[numbArray.length - 1] =
+      numbArray[numbArray.length - 1] + String(x.innerHTML);
+    console.log(numbArray);
+    flag = 1;
+  } else if (flag == 0) {
+    // Decides whether to make a number bigger or to add a new number
+    numbArray.push(x.innerHTML);
+    console.log(numbArray);
+    flag = 1;
+  } else if (!isNaN(Number(x.innerHTML))) {
+    numbArray[numbArray.length - 1] =
+      String(numbArray[numbArray.length - 1]) + String(x.innerHTML);
+    console.log(numbArray);
+  }
 }
 
-function addSymbol(x) // Gets a symbol buttons symbol and adds it to the array (sets flag to 1)
-{
-    numbArray.push(x.innerHTML)
-    console.log(numbArray)
-    flag = 0
+function addSymbol(x) {
+  // Gets a symbol buttons symbol and adds it to the array (sets flag to 0)
+  numbArray.push(x.innerHTML);
+  console.log(numbArray);
+  flag = 0;
 }
 
 // Calculates the result of the numbArray and returns it
@@ -53,6 +56,7 @@ function calculateResult() {
       //console.log(currentOperator, "Current Operator")
     }
   }
+  clearDisplay()
   finalResult = result
   //console.log(finalResult)
 }

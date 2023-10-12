@@ -10,7 +10,7 @@ h1
 }
 body
 {
-background-color:rgb(202, 234, 212);
+background-color: rgb(rgb(94, 83, 83));
 }
 .mainbutton
 {
@@ -18,15 +18,4 @@ background-color:rgb(202, 234, 212);
   border-width: 5px;
   border-color: black;
   border-style: groove;
-}
-h2
-{
-  font-size: xx-large;
-}
-.history {
-  text-align: right;
-  display: inline-block;
-  width: 10%;
-  height: 1000%;
-  background-color: whitesmoke;
 }
