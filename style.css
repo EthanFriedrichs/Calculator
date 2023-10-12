@@ -3,13 +3,9 @@
 h1
 {
   text-align: center;
+dev_kishaun
     color: rgb(0, 0, 0);
-    border-width: 50px;
-    border-color: black;
-    border-style: groove;
-}
-.mainbutton{
-    text-align: center;
-    border-width: 30px;
-    border-color: black;
+body
+{
+  background-image: url(https://www.careerprofiles.com/wp-content/uploads/2019/05/Hourly-Wage-Calculator-scaled.jpg);
 }
