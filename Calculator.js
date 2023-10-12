@@ -1,5 +1,6 @@
 var numbArray = [];
 var flag = 0;
+var finalResult = 0;
 
 function addThing(x)
 {
@@ -32,8 +33,9 @@ function calculateResult() {
   for (let i = 0; i < numbArray.length; i++) {
     let currentElement = numbArray[i];
 
-    if (!isNaN(currentElement)) {
+    if (!isNaN(Number(currentElement))) {
       // If the current element is a number
+      //console.log(numbArray[i], "Current Number")
       if (currentOperator === "+") {
         result += Number(currentElement);
       } else if (currentOperator === "/") {
@@ -48,10 +50,11 @@ function calculateResult() {
     } else {
       // If the current element is an operator
       currentOperator = currentElement;
+      //console.log(currentOperator, "Current Operator")
     }
   }
-
-  return result;
+  finalResult = result
+  //console.log(finalResult)
 }
 // Shows input on display within the html
 function updateDisplay() {
