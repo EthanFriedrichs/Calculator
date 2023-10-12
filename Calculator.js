@@ -57,6 +57,8 @@ function calculateResult() {
         result *= Number(currentElement);
       } else if (currentOperator === "") {
         result = Number(currentElement);
+      } else if (currentOperator === "^") {
+        result = Math.pow(result, Number(currentElement));
       }
     } else {
       // If the current element is an operator
