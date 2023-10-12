@@ -56,9 +56,8 @@ function calculateResult() {
       //console.log(currentOperator, "Current Operator")
     }
   }
-  clearDisplay()
   finalResult = result
-  //console.log(finalResult)
+  console.log(finalResult)
 }
 
 function remove() //Removes current element
