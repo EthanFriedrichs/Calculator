@@ -22,7 +22,6 @@ function addThing(x)
 function addSymbol(x) // Gets a symbol buttons symbol and adds it to the array (sets flag to 1)
 {
     flag = 1
-    console.log(x.innerHTML, "Pushed symbol")
     numbArray.push(x.innerHTML)
-    console.log(numbArray)
+    
 }
