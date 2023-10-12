@@ -20,8 +20,7 @@ font-size: large;
   border-color: black;
   border-style: groove;
  background-color: aliceblue;
- margin-right: auto;
- margin-left: auto;
+
 }
 body
 {
@@ -41,16 +40,4 @@ h2
 #display
 {
   font-size: x-large;
-}
-div {
-  margin:auto;
-  width: 512px;
-  height: 512px;
-  background: rgba(0,0,0,.4);
-  position: relative;
-}
-img {
-  position: absolute;
-  left: 50%;
-  margin-left:-256px;
 }
