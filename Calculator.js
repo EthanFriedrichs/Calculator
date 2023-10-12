@@ -35,7 +35,7 @@ function addSymbol(x) {
   }
 }
 
-
+// Calculates the result of the numbArray and returns it
 function calculateResult() {
   let result = 0;
   let currentOperator = "";
@@ -55,7 +55,7 @@ function calculateResult() {
         result -= Number(currentElement);
       } else if (currentOperator === "*") {
         result *= Number(currentElement);
-      } else {
+      } else if (currentOperator === "") {
         result = Number(currentElement);
       }
     } else {
@@ -68,15 +68,17 @@ function calculateResult() {
   return result;
 }
 
-
+// clears the numbArray
 function clear() {
   numbArray = [];
   flag = 0;
 }
+// Shows input on display within the html
 function updateDisplay() {
   document.getElementById("display").innerHTML = numbArray.join(" ");
   calculateResult();
 }
+// clears the display within the html and calls updateDisplay to show this change
 function clearDisplay() {
   document.getElementById("display").innerHTML = "0";
   numbArray = [];
