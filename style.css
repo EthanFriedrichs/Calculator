@@ -8,20 +8,7 @@ h1
     border-color: black;
     border-style: groove;
 }
-.mainbutton
-{
-  text-align: center;
-    color: rgb(0, 0, 0);
-    border-width: 5px;
-    border-color: black;
-    border-style: groove;
-font-size: large;
-  border-width: 5px;
-  border-color: black;
-  border-style: groove;
- background-color: aliceblue;
 
-}
 body
 {
 background-color:rgb(202, 234, 212);
@@ -37,7 +24,36 @@ h2
   height: 1000%;
   background-color: whitesmoke;
 }
+.mainbutton
+{
+  text-align: center;
+    color: rgb(0, 0, 0);
+    border-width: 5px;
+    border-color: black;
+    border-style: groove;
+font-size: large;
+  border-width: 5px;
+  border-color: black;
+  border-style: groove;
+ background-color: aliceblue;
+ z-index: 2;
+ 
+}
 #display
 {
-  font-size: x-large;
+  color:rgb(255, 255, 255);
+  font-size: xxx-large;
+  padding-bottom: 50px
+}
+
+div {
+  margin:;
+  width: 500px;
+  height: 30px;
+  background: rgba(0,0,4);
+  position: relative;
+}
+img {
+  margin-left:-256px;
+  position: relative;
 }
