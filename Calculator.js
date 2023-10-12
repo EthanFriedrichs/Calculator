@@ -56,7 +56,8 @@ function calculateResult() {
       //console.log(currentOperator, "Current Operator")
     }
   }
-  finalResult = result;
+  clearDisplay()
+  finalResult = result
   //console.log(finalResult)
 }
 // Shows input on display within the html
