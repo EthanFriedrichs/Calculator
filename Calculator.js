@@ -10,8 +10,13 @@ function addThing(x) {
     flag = 1;
   } else {
     console.log(numbArray.length - 1, "Merging numbers", x.innerHTML);
-    numbArray[numbArray.length - 1] =
-      String(numbArray[numbArray.length - 1]) + String(x.innerHTML);
+    if (x.innerHTML === "-" && isNaN(numbArray[numbArray.length - 1])) {
+      // If the previous element is not a number, add the minus sign to the array
+      numbArray.push(x.innerHTML);
+    } else {
+      numbArray[numbArray.length - 1] =
+        String(numbArray[numbArray.length - 1]) + String(x.innerHTML);
+    }
     console.log(numbArray);
   }
   updateDisplay(numbArray.join(" "));
