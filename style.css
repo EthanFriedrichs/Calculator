@@ -1,28 +1,30 @@
-.mainbutton{padding: 45px; border-collapse: collapse; margin-top: 4px;}
-
-h1
-{
-  text-align: center;
-    color: rgb(0, 0, 0);
-    border-width: 50px;
-    border-color: black;
-    border-style: groove;
+.mainbutton {
+  padding: 45px;
+  border-collapse: collapse;
+  margin-top: 4px;
 }
 
+h1 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-width: 50px;
+  border-color: black;
+  border-style: groove;
+}
 body
 {
-background-color:rgb(202, 234, 212);
+ background-color: rgb(202,234,212);
 }
-h2
-{
   font-size: xx-large;
 }
+
 .history {
   text-align: right;
   display: inline-block;
   width: 10%;
   height: 1000%;
   background-color: whitesmoke;
+
 }
 .mainbutton
 {
