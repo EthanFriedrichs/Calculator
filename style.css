@@ -10,5 +10,12 @@ h1
 }
 body
 {
-  background-image: url(https://st4.depositphotos.com/9515902/27906/i/600/depositphotos_279064402-stock-photo-futuristic-glitch-background-abstract-pixel.jpg)
+background-color: rgb(rgb(94, 83, 83);
+}
+.mainbutton
+{
+  text-align: center;
+  border-width: 5px;
+  border-color: black;
+  border-style: groove;
 }
