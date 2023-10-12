@@ -1,4 +1,5 @@
 var numbArray = [];
+var visiblearray = [];
 var flag = 0;
 var finalResult = 0;
 
@@ -55,7 +56,9 @@ function calculateResult() {
       currentOperator = currentElement;
       //console.log(currentOperator, "Current Operator")
     }
-  }
+
+  return result;
+=======
   finalResult = result
   console.log(finalResult)
 }
@@ -80,3 +83,4 @@ function clearDisplay() {
   updateDisplay();
   console.log(numbArray);
 }
+
