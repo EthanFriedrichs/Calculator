@@ -3,7 +3,23 @@
 h1
 {
   text-align: center;
+    color: rgb(0, 0, 0);
+    border-width: 50px;
+    border-color: black;
+    border-style: groove;
+}
+.mainbutton
+{
+  text-align: center;
+    color: rgb(0, 0, 0);
+    border-width: 5px;
+    border-color: black;
+    border-style: groove;
 
+  border-width: 45px;
+  border-color: black;
+  border-style: groove;
+ background-color: aliceblue;
 }
 body
 {
