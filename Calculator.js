@@ -1,5 +1,6 @@
 
 var numbArray = [];
+var visiblearray = [];
 var flag = 0;
 
 function addThing(x) {
@@ -59,9 +60,7 @@ function calculateResult() {
       currentOperator = currentElement;
     }
   }
-
   return result;
-  moveEquationToHistory();  
 }
 // Shows input on display within the html
 function updateDisplay() {
@@ -76,3 +75,5 @@ function clearDisplay() {
   updateDisplay();
   console.log(numbArray);
 }
+
+
