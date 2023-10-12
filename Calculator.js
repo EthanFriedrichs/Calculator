@@ -60,6 +60,14 @@ function calculateResult() {
   finalResult = result
   //console.log(finalResult)
 }
+
+function remove()
+{
+    console.log(numbArray, "BEFORE")
+    numbArray.splice((numbArray.length - 1), 1)
+    console.log(numbArray, "AFTER")
+}
+
 // Shows input on display within the html
 function updateDisplay() {
   document.getElementById("display").innerHTML = numbArray.join(" ");
