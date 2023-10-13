@@ -90,7 +90,7 @@ function calculateResult() {
   for (let i = 0; i < numbArray.length; i++) { // Does multiplication and division
     let currentElement = numbArray[i];
 
-    if ((!isNaN(currentElement)) && ((currentOperator == "*") || (currentOperator == "/"))) 
+    if ((!isNaN(currentElement)) && ((currentOperator == "*") || (currentOperator == "÷"))) 
     {
       // If the current element is a number
       if (currentOperator === "*") 
@@ -101,7 +101,7 @@ function calculateResult() {
         i -= 2
       } 
       
-      else if (currentOperator === "/") 
+      else if (currentOperator === "÷") 
       {
         //console.log("Spliced:", numbArray[i - 2], numbArray[i - 1], numbArray[i])
         numbArray.splice(i - 2, 3, (numbArray[i - 2] / numbArray[i]))
