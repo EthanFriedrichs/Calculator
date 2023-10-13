@@ -30,7 +30,7 @@ function addThing(x)
   updateDisplay(numbArray.join(" "));
 }
 
-function addNegative(x)
+function addSpecial(x)
 {
   flag = 1;
   numbArray.push(x.innerHTML);
