@@ -33,8 +33,18 @@ function addThing(x)
 function addSpecial(x)
 {
   flag = 1;
-  numbArray.push(x.innerHTML);
-  updateDisplay(numbArray.join(" "));
+
+  if (x.innerHTML == "-")
+  {
+    numbArray.push(x.innerHTML);
+    updateDisplay(numbArray.join(" "));
+  }
+
+  else
+  {
+    numbArray[numbArray.length - 1] = String(numbArray[numbArray.length - 1]) + x.innerHTML
+    updateDisplay(numbArray.join(" "));
+  }
 }
 
 function addSymbol(x) {
