@@ -124,6 +124,10 @@ function clearDisplay() {
 
 
 function addHistory() {
-  document.getElementById("history").innerHTML = numbArray.join(" ");
-
+  //document.getElementById("history").innerHTML = numbArray.join(" ");
+  var list = document.getElementById("history"); 
+  for (var i = 0; i < numbArray.length; i++) 
+  {   var li = document.createElement('li');   
+  li.innerText = numbArray[i];  
+  list.appendChild(li); }
 }
