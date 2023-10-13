@@ -1,7 +1,6 @@
 var numbArray = [];
 var flag = 0;
 
-
 function addThing(x) 
 {
     if (numbArray.length == 1 && numbArray[numbArray.length - 1] === "-") 
@@ -31,13 +30,11 @@ function addThing(x)
   updateDisplay(numbArray.join(" "));
 }
 
-
 function addSymbol(x) {
   flag = 0;
   numbArray.push(x.innerHTML);
   updateDisplay(numbArray.join(" "));
 }
-
 
 // Calculates the result of the numbArray and returns it
 function calculateResult() {
@@ -104,6 +101,7 @@ function calculateResult() {
 
   updateDisplay(numbArray.join(" "));
 }
+
 // Shows input on display within the html
 function updateDisplay() {
   document.getElementById("display").innerHTML = numbArray.join(" ");
