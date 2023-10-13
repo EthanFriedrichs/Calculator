@@ -75,3 +75,19 @@ img {
   margin-left:-256px;
   position: relative;
 }
+.history
+{
+  margin-right: auto;
+  text-align: left;
+  width: auto;
+  border-width: 10px;
+  border-color:beige ;
+  border-style: groove;
+}
+h2 {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  border-width: 25px;
+  border-color: black;
+  border-style: groove;
+}
