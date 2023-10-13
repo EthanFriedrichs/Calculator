@@ -30,16 +30,11 @@
     <button class = "mainbutton" onclick = "addThing(this)">9</button>
     <button class = "mainbutton" onclick = "addSymbol(this)">*</button>
     <button class = "empty" ></button>
-    <button class = "mainbutton" onclick = "" ></button>
+  <button class = "mainbutton" onclick = "addNegative(this)">-</button>
     <br>
     <button class = "mainbutton" onclick = "addThing(this)">0</button>
     <button class = "mainbutton" onclick = "addSymbol(this)">.</button>
-
-    
     <button class="mainbutton" onclick="addSymbol(this)">^</button>
-
-    <button class = "mainbutton" onclick = "calculateResult()">=</button>
-    <button class = "mainbutton" onclick="addSymbol(this)">^</button>
 
     <button class = "mainbutton" onclick = "addSymbol(this)">÷</button>
     <button class = "mainbutton" onclick = "calculateResult(),addHistory()">=</button>
@@ -48,7 +43,6 @@
    <br>
    <h1>History</h1>
    <div id="history"class="history"></div>
-  
     <script src = "Calculator.js"></script>
 </body>
 </html>
