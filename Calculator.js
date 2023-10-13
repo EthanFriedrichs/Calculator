@@ -30,6 +30,13 @@ function addThing(x)
   updateDisplay(numbArray.join(" "));
 }
 
+addNegative(x)
+{
+  flag = 1;
+  numbArray.push(x.innerHTML);
+  updateDisplay(numbArray.join(" "));
+}
+
 function addSymbol(x) {
   flag = 0;
   numbArray.push(x.innerHTML);
