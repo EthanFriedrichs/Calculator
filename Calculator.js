@@ -124,6 +124,6 @@ function clearDisplay() {
 
 
 function addHistory() {
-  document.getElementById("history").innerHTML = numbArray.splice(" ");
+  document.getElementById("history").innerHTML = numbArray.join(" ");
 
 }
