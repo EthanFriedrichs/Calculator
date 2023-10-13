@@ -30,7 +30,7 @@ function addThing(x)
   updateDisplay(numbArray.join(" "));
 }
 
-addNegative(x)
+function addSpecial(x)
 {
   flag = 1;
   numbArray.push(x.innerHTML);
@@ -84,7 +84,8 @@ function calculateResult() {
     if (!isNaN(currentElement) && ((currentOperator == "+") || (currentOperator == "-")))
     {
       // If the current element is a number
-      if (currentOperator === "+") 
+
+      if (currentOperator === "+")
       {
         console.log("Spliced:", numbArray[v - 2], numbArray[v - 1], numbArray[v])
         numbArray.splice(v - 2, 3, (Number(numbArray[v - 2]) + Number(numbArray[v])))
@@ -103,6 +104,14 @@ function calculateResult() {
     {
       // If the current element is an operator
       currentOperator = currentElement;
+    }
+  }
+
+  for (let l = 0; l < numbArray.length; l++) // If something is NaN it will change the array to only "INVALID"
+  {
+    if (isNaN(numbArray[l]))
+    {
+      numbArray = ["INVALID"];
     }
   }
 
