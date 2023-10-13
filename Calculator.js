@@ -119,5 +119,11 @@ function clearDisplay() {
   numbArray = [];
   flag = 0;
   updateDisplay();
-  console.log(numbArray);
+
+} 
+
+
+function addHistory() {
+  document.getElementById("history").innerHTML = numbArray.join(" ");
+
 }
