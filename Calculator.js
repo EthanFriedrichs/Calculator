@@ -30,7 +30,7 @@ function addThing(x)
   updateDisplay(numbArray.join(" "));
 }
 
-addNegative(x)
+function addSpecial(x)
 {
   flag = 1;
   numbArray.push(x.innerHTML);
@@ -48,6 +48,34 @@ function calculateResult() {
   let result = 0;
   let currentOperator = "";
   flag = 1
+
+  for (let k = 0; k < numbArray.length; k++) { // Does multiplication and division
+    let currentElement = numbArray[k];
+
+    if (!(isNaN(currentElement)) && (currentOperator == "^")) 
+    {
+      // If the current element is a number
+      if (currentOperator === "^") 
+      {
+        console.log("EXPONENT:", numbArray, k, numbArray[k - 2], numbArray[k - 1], numbArray[k])
+        result = numbArray[k - 2]
+        for (let x = 0; x < numbArray[k] - 1; x++)
+        {
+          console.log(result)
+          result *= numbArray[k - 2]
+        }
+        numbArray.splice(k - 2, 3, result)
+        console.log(numbArray)
+        k -= 2
+      }
+    } 
+    
+    else 
+    {
+      // If the current element is an operator
+      currentOperator = currentElement;
+    }
+  }
 
   for (let i = 0; i < numbArray.length; i++) { // Does multiplication and division
     let currentElement = numbArray[i];
@@ -84,7 +112,8 @@ function calculateResult() {
     if (!isNaN(currentElement) && ((currentOperator == "+") || (currentOperator == "-")))
     {
       // If the current element is a number
-      if (currentOperator === "+") 
+
+      if (currentOperator === "+")
       {
         console.log("Spliced:", numbArray[v - 2], numbArray[v - 1], numbArray[v])
         numbArray.splice(v - 2, 3, (Number(numbArray[v - 2]) + Number(numbArray[v])))
@@ -103,6 +132,14 @@ function calculateResult() {
     {
       // If the current element is an operator
       currentOperator = currentElement;
+    }
+  }
+
+  for (let l = 0; l < numbArray.length; l++) // If something is NaN it will change the array to only "INVALID"
+  {
+    if (isNaN(numbArray[l]))
+    {
+      numbArray = ["INVALID"];
     }
   }
 
