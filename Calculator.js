@@ -3,19 +3,17 @@ var flag = 0;
 
 function addThing(x) {
   if (flag == 0) {
-    // Decides whether to make a number bigger or to add a new number
     console.log(x.innerHTML, "Added numb to array");
-    numbArray.push(x.innerHTML);
+    numbArray.push(Number(x.innerHTML));
     console.log(numbArray);
     flag = 1;
   } else {
     console.log(numbArray.length - 1, "Merging numbers", x.innerHTML);
     if (x.innerHTML === "-" && isNaN(numbArray[numbArray.length - 1])) {
-      // If the previous element is not a number, add the minus sign to the array
       numbArray.push(x.innerHTML);
     } else {
       numbArray[numbArray.length - 1] =
-        String(numbArray[numbArray.length - 1]) + String(x.innerHTML);
+        Number(numbArray[numbArray.length - 1]) * 10 + Number(x.innerHTML);
     }
     console.log(numbArray);
   }
@@ -24,56 +22,83 @@ function addThing(x) {
 
 function addSymbol(x) {
   flag = 0;
-  numbArray.push(x.innerHTML);
-
-  // If the symbol is "=", calculate the result
   if (x.innerHTML === "=") {
     let result = calculateResult();
     console.log(result);
-    numbArray.push(result);
-    updateDisplay(numbArray.join(" "));
+    numbArray = [result];
   } else {
-    updateDisplay(numbArray.join(" "));
+    numbArray.push(x.innerHTML);
   }
-}
 
-// Calculates the result of the numbArray and returns it
+  updateDisplay(numbArray.join(" "));
+}
 function calculateResult() {
-  let result = 0;
-  let currentOperator = "";
+  let numStack = [];
+  let opStack = [];
 
   for (let i = 0; i < numbArray.length; i++) {
     let currentElement = numbArray[i];
 
     if (!isNaN(currentElement)) {
-      // If the current element is a number
-      if (currentOperator === "+") {
-        result += Number(currentElement);
-      } else if (currentOperator === "÷") {
-        result /= Number(currentElement);
-      } else if (currentOperator === "-") {
-        result -= Number(currentElement);
-      } else if (currentOperator === "*") {
-        result *= Number(currentElement);
-      } else if (currentOperator === "") {
-        result = Number(currentElement);
-      } else if (currentOperator === "^") {
-        result = Math.pow(result, Number(currentElement));
-      }
+      numStack.push(Number(currentElement));
     } else {
-      // If the current element is an operator
-      currentOperator = currentElement;
+      while (
+        opStack.length > 0 &&
+        precedence(opStack[opStack.length - 1]) >= precedence(currentElement)
+      ) {
+        compute(numStack, opStack);
+      }
+      opStack.push(currentElement);
     }
   }
 
-  return result;
+  while (opStack.length > 0) {
+    compute(numStack, opStack);
+  }
+
+  return numStack.pop();
 }
-// Shows input on display within the html
+
+function precedence(op) {
+  if (op === "+" || op === "-") {
+    return 1;
+  } else if (op === "*" || op === "/") {
+    return 2;
+  } else if (op === "^") {
+    return 3;
+  } else {
+    return 0;
+  }
+}
+
+function compute(numStack, opStack) {
+  let num2 = numStack.pop();
+  let num1 = numStack.pop();
+  let op = opStack.pop();
+
+  switch (op) {
+    case "+":
+      numStack.push(num1 + num2);
+      break;
+    case "-":
+      numStack.push(num1 - num2);
+      break;
+    case "*":
+      numStack.push(num1 * num2);
+      break;
+    case "÷":
+      numStack.push(num1 / num2);
+      break;
+    case "^":
+      numStack.push(Math.pow(num1, num2));
+      break;
+  }
+}
+
 function updateDisplay() {
   document.getElementById("display").innerHTML = numbArray.join(" ");
-  calculateResult();
 }
-// clears the display within the html and calls updateDisplay to show this change
+
 function clearDisplay() {
   document.getElementById("display").innerHTML = "0";
   numbArray = [];
